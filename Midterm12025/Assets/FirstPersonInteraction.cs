@@ -60,6 +60,7 @@ public class FirstPersonInteraction : MonoBehaviour
         // 从摄像机中心发射射线
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
+        bool hitSomething = Physics.Raycast(ray, out hit, 100f, interactableLayer);
 
         // 调试：显示射线
         if (showDebugRay)
@@ -67,18 +68,18 @@ public class FirstPersonInteraction : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction * interactionDistance, Color.yellow);
         }
 
-        // 检测射线是否击中物体
-        bool hitSomething = false;
-
-        if (interactableLayer.value == 0)
+        if (hitSomething)
         {
             // 如果没有设置层级，检测所有物体
-            hitSomething = Physics.Raycast(ray, out hit, interactionDistance);
-        }
-        else
-        {
-            // 只检测指定层级的物体
-            hitSomething = Physics.Raycast(ray, out hit, interactionDistance, interactableLayer);
+            //hitSomething = Physics.Raycast(ray, out hit, interactionDistance);
+            //call the functions on your interactable object here
+            GameObject target = hit.collider.gameObject;
+            ClickableObjectFPS objectScript = target.GetComponent<ClickableObjectFPS>();
+
+            if (Input.GetKeyUp(interactKey))
+            {
+                //code that should run when the player clicks on an object goes here
+            }
         }
 
         if (hitSomething)
