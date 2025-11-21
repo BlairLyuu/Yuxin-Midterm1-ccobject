@@ -15,12 +15,12 @@ public class SceneTeleporter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isTransitioning)
-        {
+        { 
             StartCoroutine(TransitionToScene());
         }
     }
 
-    private IEnumerator TransitionToScene()
+    public IEnumerator TransitionToScene()
     {
         isTransitioning = true;
 
@@ -40,5 +40,10 @@ public class SceneTeleporter : MonoBehaviour
         yield return StartCoroutine(FadeManager.Instance.FadeIn());
 
         isTransitioning = false;
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(targetSceneName);
     }
 }
