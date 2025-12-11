@@ -22,7 +22,7 @@ public class TestRayScript : MonoBehaviour
             RaycastHit itemHit; //Creates a variable to store information about what the raycast hits
             if (Physics.Raycast(Screenray, out itemHit)) //If the raycast hits something within 100 units
             {
-                print("You have clicked on " + itemHit.collider.gameObject.name);
+                //print("You have clicked on " + itemHit.collider.gameObject.name);
             }
         }
     }

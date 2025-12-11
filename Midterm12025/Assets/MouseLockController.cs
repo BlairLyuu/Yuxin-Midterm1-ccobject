@@ -5,10 +5,17 @@ public class MouseLockController : MonoBehaviour
     /// <summary>
     /// Ëø¶¨Êó±ê
     /// </summary>
+    /// 
+    public MinePlayerController minePlayerControllerScript;
+
+
     public void LockMouse()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        minePlayerControllerScript.SetMouseLock(true);
+        TimeResume();
+        Debug.Log("Mouse Locked");
     }
 
     /// <summary>
@@ -16,7 +23,19 @@ public class MouseLockController : MonoBehaviour
     /// </summary>
     public void UnlockMouse()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
+        minePlayerControllerScript.SetMouseLock(false);
+        TimeStop();
+    }
+    public void TimeStop()
+    {
+        Time.timeScale = 0f;
+        Debug.Log("Time Stopped");
+    }
+    public void TimeResume()
+    {
+        Time.timeScale = 1f;
+        Debug.Log("Time Resumed");
     }
 }
