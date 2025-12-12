@@ -7,6 +7,8 @@ public class TriggerEvent : MonoBehaviour
     [Tooltip("触发器的标签，留空则任何物体都会触发")]
     public string targetTag = "Player";
 
+    public MinePlayerController minePlayerControllerScript;
+
     [Tooltip("是否只触发一次")]
     public bool triggerOnce = false;
 
@@ -59,6 +61,8 @@ public class TriggerEvent : MonoBehaviour
 
         // 可选：输出调试信息
         Debug.Log($"[TriggerEvent] {other.name} 进入了触发器 {gameObject.name}");
+
+        minePlayerControllerScript.BanPlayerMoving(false);
     }
 
     void OnTriggerStay(Collider other)

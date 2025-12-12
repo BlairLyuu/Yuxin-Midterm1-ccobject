@@ -1,3 +1,4 @@
+using UnityEditor.XR;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,9 +7,7 @@ public class MinePlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
-    public float jumpForce = 5f;
-    public float gravity = -9.81f;
-    
+    public float jumpForce = 5f;    
 
 
 
@@ -58,6 +57,7 @@ public class MinePlayerController : MonoBehaviour
     private Vector3 currentOffset = Vector3.zero;
     private Vector3 lastPos;
     private Vector2 lookInput;
+    private bool canMove = true;
 
     void Awake()
     {
@@ -73,6 +73,7 @@ public class MinePlayerController : MonoBehaviour
         basePos = cameraTransform.localPosition;
 
         lookInput = Vector2.zero;
+
     }
 
     void Update()
@@ -89,10 +90,19 @@ public class MinePlayerController : MonoBehaviour
 
     }
 
+    public void BanPlayerMoving(bool _canMove)
+    {
+        canMove = _canMove;
+        mouseLocked = _canMove;
+    }
     void Move()
     {
+        Vector2 moveInput;
+        if (canMove)
+            moveInput = moveAction.ReadValue<Vector2>();
+        else
+                    moveInput = Vector2.zero;
 
-        Vector2 moveInput = moveAction.ReadValue<Vector2>();
 
         if (Keyboard.current.shiftKey.isPressed)
         {
@@ -107,16 +117,6 @@ public class MinePlayerController : MonoBehaviour
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
         controller.Move(move * finalMoveSpeed * Time.deltaTime);
 
-
-        if (controller.isGrounded)
-        {
-            velocity.y = -1f;
-
-        }
-        else
-        {
-            velocity.y += gravity * Time.deltaTime;
-        }
 
         controller.Move(velocity * Time.deltaTime);
 
