@@ -13,6 +13,9 @@ EditorBuildSettings:
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/jiqiren.unity
+    guid: 9d6662c4a8117cd4fba6e35c75ced9aa
+  - enabled: 0
+    path: Assets/Scenes/jiqiren2.unity
     guid: ed44cb9bc48a27641b5a79c70565b5eb
   - enabled: 1
     path: Assets/Scenes/xiaojie.unity
