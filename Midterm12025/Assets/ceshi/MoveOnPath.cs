@@ -19,7 +19,7 @@ public class MoveOnPath : MonoBehaviour
 
         obj.DOPath(
                 path,
-                45f,                     // 持续时间
+                40f,                     // 持续时间
                 PathType.CatmullRom,    // 平滑曲线
                 PathMode.Full3D         // 3D路径
             )
