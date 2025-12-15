@@ -9,6 +9,8 @@ public class SceneOneMananger : MonoBehaviour
     public Transform TargetTrans;
     public AudioSource AudioPlayer;
     public List<AudioClip> audioClips;
+
+    public List<GameObject> gameObjects;
     private void Start()
     {
         // 1) 读取保存的次数
@@ -26,8 +28,21 @@ public class SceneOneMananger : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        AudioPlayer.clip = audioClips[SceneOneIndex];
-        AudioPlayer.Play();
+        for (int  i=0; i <= SceneOneIndex; i++)
+        {
+            if (i>=gameObjects.Count) 
+            {
+                continue;
+            }
+
+            gameObjects[i].SetActive(true);
+        }
+        if (SceneOneIndex<audioClips.Count) 
+        {
+            AudioPlayer.clip = audioClips[SceneOneIndex];
+            AudioPlayer.Play();
+        }
+     
 
 
         Debug.Log("SceneOneIndex: " + SceneOneIndex);

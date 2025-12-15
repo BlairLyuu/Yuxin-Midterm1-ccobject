@@ -22,6 +22,8 @@ public class ButtonShowCanvasContent : MonoBehaviour
 
     public void Show(int index)
     {
+        Debug.Log("Show Index + " + index.ToString());
+
         if (pictureCanvases == null || pictureCanvases.Length == 0) return;
         if (index < 0 || index >= pictureCanvases.Length) return;
 
