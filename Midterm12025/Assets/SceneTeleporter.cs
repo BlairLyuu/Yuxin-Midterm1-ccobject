@@ -17,6 +17,7 @@ public class SceneTeleporter : MonoBehaviour
 
     private bool isTransitioning = false;
 
+    public SceneOneMananger oneMananger;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isTransitioning)
@@ -28,7 +29,7 @@ public class SceneTeleporter : MonoBehaviour
     public IEnumerator TransitionToScene()
     {
         isTransitioning = true;
-
+        oneMananger.OnChangerScene();
         // A) 先放 Intro（在 Scene1 里播放完）
         GameObject introObj = null;
         if (introPrefab != null)
@@ -52,21 +53,19 @@ public class SceneTeleporter : MonoBehaviour
 
         // B) 再渐黑（你原来的流程）
         if (FadeManager.Instance != null)
-            yield return FadeManager.Instance.FadeOut();
+
+           StartCoroutine(FadeManager.Instance.FadeOut());
+
+        yield return new WaitForSeconds(2);
 
         if (delayAfterFadeOut > 0)
             yield return new WaitForSeconds(delayAfterFadeOut);
 
+
         // C) 切换场景
         SceneManager.LoadScene(targetSceneName);
 
-        // D) 等一帧，确保新场景初始化完再渐白（更稳）
-        yield return null;
-
-        if (FadeManager.Instance != null)
-            yield return FadeManager.Instance.FadeIn();
-
-        isTransitioning = false;
+       
     }
 
     public void NextScene()

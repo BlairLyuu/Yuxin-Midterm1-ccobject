@@ -175,7 +175,7 @@ public class MinePlayerController : MonoBehaviour
 
         rotX -= mouseY;
         rotX = Mathf.Clamp(rotX, minLookX, maxLookX);
-        Debug.Log("rotX:" + rotX);
+    //    Debug.Log("rotX:" + rotX);
         cameraTransform.localRotation = Quaternion.Euler(rotX, 0, 0);
     }
 
@@ -202,7 +202,7 @@ public class MinePlayerController : MonoBehaviour
             coyoteCounter = coyoteTime;
         else
             coyoteCounter -= Time.deltaTime;
-        Debug.Log("Jumpeddfnaksblkabdj");
+       // Debug.Log("Jumpeddfnaksblkabdj");
 
 
 

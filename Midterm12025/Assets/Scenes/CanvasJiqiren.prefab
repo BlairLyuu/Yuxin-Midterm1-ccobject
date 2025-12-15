@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 4862720315789261165}
   - component: {fileID: 7131157882464863238}
   - component: {fileID: 1973866568992968657}
+  - component: {fileID: 7010760845581178416}
   m_Layer: 5
   m_Name: CanvasJiqiren
   m_TagString: Untagged
@@ -436,10 +437,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da595c71122b7fc4eb15516770331291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroOverlay
-  group: {fileID: 0}
-  fadeIn: 0.25
+  group: {fileID: 7010760845581178416}
+  fadeIn: 0.5
   hold: 1.5
-  fadeOut: 0.35
+  fadeOut: 0.5
+--- !u!225 &7010760845581178416
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6930804713210025797}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7265562584619599016
 GameObject:
   m_ObjectHideFlags: 0

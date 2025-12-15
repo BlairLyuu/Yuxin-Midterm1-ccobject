@@ -19,6 +19,9 @@ public class FadeManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+
+            PlayerPrefs.DeleteAll();
+
             DontDestroyOnLoad(gameObject); // 场景切换时不销毁
         }
         else
@@ -53,6 +56,11 @@ public class FadeManager : MonoBehaviour
         // 确保完全黑
         color.a = 1f;
         fadeImage.color = color;
+
+
+        yield return new WaitForSeconds(2);
+
+        StartCoroutine(FadeIn());
     }
 
     // 淡入（渐变白/透明）
