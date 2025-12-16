@@ -5464,6 +5464,7 @@ MonoBehaviour:
   introFallbackDuration: 4
   delayAfterFadeOut: 2
   oneMananger: {fileID: 1087827672}
+  SceneIndex: 2
 --- !u!65 &391462401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10713,7 +10714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2437, y: 13.9329}
+  m_AnchoredPosition: {x: 1.2437, y: 13.749998}
   m_SizeDelta: {x: 698.1971, y: 418.9137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727779205
@@ -11167,6 +11168,7 @@ MonoBehaviour:
   introFallbackDuration: 4
   delayAfterFadeOut: 2
   oneMananger: {fileID: 1087827672}
+  SceneIndex: 3
 --- !u!1 &759840424
 GameObject:
   m_ObjectHideFlags: 0
@@ -14418,7 +14420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278.1, y: -202.9}
+  m_AnchoredPosition: {x: 278.1, y: -187.94122}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &994788582
@@ -14481,6 +14483,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MouseLockController, Assembly-CSharp
         m_MethodName: LockMouse
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1844149221}
+        m_TargetAssemblyTypeName: UnityEngine.BoxCollider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15730,6 +15744,7 @@ MonoBehaviour:
   - {fileID: 1443065228}
   - {fileID: 391462399}
   - {fileID: 754913941}
+  StartPanel: {fileID: 1300768713}
 --- !u!82 &1087827673
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17034,7 +17049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1194373981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18222,6 +18237,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1333180925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1300768713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6930804713210025797, guid: c91d66ec3acbb5248a41fad3367eea42, type: 3}
+  m_PrefabInstance: {fileID: 2053956104920802033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1304306046
 GameObject:
   m_ObjectHideFlags: 0
@@ -22692,6 +22712,7 @@ MonoBehaviour:
   introFallbackDuration: 4
   delayAfterFadeOut: 2
   oneMananger: {fileID: 1087827672}
+  SceneIndex: 1
 --- !u!65 &1443065230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22802,7 +22823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1461879481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22974,14 +22995,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.29803923, g: 0.2689848, b: 0.23137255, a: 0.77254903}
+  m_Color: {r: 0.5345911, g: 0.5145167, b: 0.48583904, a: 0.77254903}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4e6c1e5df5481544f9b809b52b0f0e26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00a36cce8279a524f9083df24223603e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23603,7 +23624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1521737592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33334,7 +33355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6930804713210025797, guid: c91d66ec3acbb5248a41fad3367eea42, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9086149334609969845, guid: c91d66ec3acbb5248a41fad3367eea42, type: 3}
       propertyPath: m_Pivot.x

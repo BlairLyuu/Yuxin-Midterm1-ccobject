@@ -11,6 +11,15 @@ public class SceneOneMananger : MonoBehaviour
     public List<AudioClip> audioClips;
 
     public List<GameObject> gameObjects;
+
+    public static SceneOneMananger Instance;
+
+    public GameObject StartPanel;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         // 1) 读取保存的次数
@@ -20,8 +29,8 @@ public class SceneOneMananger : MonoBehaviour
         int returned = PlayerPrefs.GetInt("ReturnedFromMini", 0);
         if (returned == 1)
         {
-            SceneOneIndex++;
-            PlayerPrefs.SetInt("SceneOneIndex", SceneOneIndex);
+          
+       //     PlayerPrefs.SetInt("SceneOneIndex", SceneOneIndex);
 
             // 清标记，避免重复加
             PlayerPrefs.SetInt("ReturnedFromMini", 0);
@@ -42,7 +51,10 @@ public class SceneOneMananger : MonoBehaviour
             AudioPlayer.clip = audioClips[SceneOneIndex];
             AudioPlayer.Play();
         }
-     
+
+
+        StartPanel.gameObject.SetActive(SceneOneIndex == 0);
+       
 
 
         Debug.Log("SceneOneIndex: " + SceneOneIndex);
@@ -58,12 +70,17 @@ public class SceneOneMananger : MonoBehaviour
         if (ui != null) ui.Refresh(SceneOneIndex);
     }
 
+    public void SetSceneIndex(int SceneIndex)
+    {
+        PlayerPrefs.SetInt("SceneOneIndex", SceneIndex);
+        PlayerPrefs.Save();
+    }
+
     // 如果你还想保留手动加次数的方法（比如按钮触发）
     public void OnChangerScene()
     {
-        SceneOneIndex++;
-        PlayerPrefs.SetInt("SceneOneIndex", SceneOneIndex);
-        PlayerPrefs.Save();
+     
+      
 
         Debug.Log("SceneOneIndex: " + SceneOneIndex);
 

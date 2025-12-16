@@ -523,9 +523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroOverlay
   group: {fileID: 7010760845581178416}
-  fadeIn: 0.5
-  hold: 1.5
-  fadeOut: 0.5
+  fadeIn: 2
+  hold: 15
+  fadeOut: 2
 --- !u!225 &7010760845581178416
 CanvasGroup:
   m_ObjectHideFlags: 0

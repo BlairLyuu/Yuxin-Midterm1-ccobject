@@ -18,11 +18,15 @@ public class SceneTeleporter : MonoBehaviour
     private bool isTransitioning = false;
 
     public SceneOneMananger oneMananger;
+
+    public int SceneIndex;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isTransitioning)
         {
+            SceneOneMananger.Instance.SetSceneIndex(SceneIndex);
             StartCoroutine(TransitionToScene());
+
         }
     }
 
