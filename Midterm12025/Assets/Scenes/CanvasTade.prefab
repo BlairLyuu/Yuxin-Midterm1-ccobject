@@ -27,14 +27,14 @@ RectTransform:
   m_GameObject: {fileID: 4129969359925648172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.74018544, y: 0.74018544, z: 0.74018544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 599390079749945506}
+  m_Father: {fileID: 9086149334609969845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.06637, y: -88.42439}
+  m_AnchoredPosition: {x: 2.7916965, y: 35.83333}
   m_SizeDelta: {x: 186.1267, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5076114563113307221
@@ -65,19 +65,28 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press [V] to Continue
-
-'
+  m_text: "Chapter 1 | Her Memories: Immersion\n\nHer Memories feels like a room
+    that only lights up in the dark. It doesn\u2019t rush to explain the plot; it
+    lets emotion arrive first: certain fragments return again and again, certain
+    sentences stop halfway\u2014like the way real remembering works. The more someone
+    tries to hold onto it, the more it slips away. She came to New York in the summer
+    of 2024, and Metrograph became her most reliable shelter. The moment she sat
+    down in the theater, reality was muted, and she could safely hand herself over
+    to memory. That brief but painful relationship happened before spring 2025. She
+    wasn\u2019t trying to build something long-term\u2014she was simply lonely, wanting
+    someone beside her. Her Memories captures this clearly: even when people know
+    something is unstable, they still fall in. They turn a crack into an entrance,
+    and turn longing into a way of living."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d533501d97200874eb83839809e7afbd, type: 2}
-  m_sharedMaterial: {fileID: -8131508213606297313, guid: d533501d97200874eb83839809e7afbd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb31704cec070074ca40032b135cceca, type: 2}
+  m_sharedMaterial: {fileID: -2758856410231806141, guid: fb31704cec070074ca40032b135cceca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3070230527
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.7137255}
+    rgba: 4294112484
+  m_fontColor: {r: 0.8928443, g: 0.9559748, b: 0.9485767, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -94,8 +103,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.7
-  m_fontSizeBase: 28.7
+  m_fontSize: 16.01
+  m_fontSizeBase: 16.01
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -132,7 +141,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.555336, w: 0}
+  m_margin: {x: 85.80548, y: -120.56007, z: -289.01587, w: -81.022415}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -229,6 +238,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ImageSwitcher
   currentImage: {fileID: 4979414930512510829}
   nextImage: {fileID: 0}
+--- !u!1 &5211612928750910006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1548563893350400091}
+  - component: {fileID: 6185341668000147903}
+  - component: {fileID: 4522532389038013412}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1548563893350400091
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211612928750910006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.44, y: 0.44, z: 0.44}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 9086149334609969845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -196.66666, y: -0.4166565}
+  m_SizeDelta: {x: 665, y: 999}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6185341668000147903
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211612928750910006}
+  m_CullTransparentMesh: 1
+--- !u!114 &4522532389038013412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211612928750910006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 87583ef32a1d9884eab672091163942a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6394838623895725939
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,8 +343,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.3510128, y: 1.3510128, z: 1.3510128}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 56212763820091391}
+  m_Children: []
   m_Father: {fileID: 9086149334609969845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -289,14 +372,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2862414, g: 0.24913964, b: 0.3207547, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c902c5a556a58e1439b7d3ef7b1254e6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -354,6 +437,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 599390079749945506}
+  - {fileID: 1548563893350400091}
+  - {fileID: 56212763820091391}
   - {fileID: 7172947426377768606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
