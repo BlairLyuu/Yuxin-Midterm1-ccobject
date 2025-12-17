@@ -53,6 +53,9 @@ public class TriggerEvent : MonoBehaviour
         if (!string.IsNullOrEmpty(targetTag) && !other.CompareTag(targetTag))
             return;
 
+
+
+        minePlayerControllerScript.BanPlayerMoving(false);
         // 触发事件
         onTriggerEnterEvent?.Invoke();
         onTriggerEnterWithObject?.Invoke(other.gameObject);
@@ -62,7 +65,7 @@ public class TriggerEvent : MonoBehaviour
         // 可选：输出调试信息
         Debug.Log($"[TriggerEvent] {other.name} 进入了触发器 {gameObject.name}");
 
-        minePlayerControllerScript.BanPlayerMoving(false);
+       
     }
 
     void OnTriggerStay(Collider other)
